@@ -1,2 +1,118 @@
 syntax = "proto3";
 
+syntax = "proto3";
+
+message PWMData {
+  uint32 ch0 = 1;
+  uint32 ch1 = 2;
+  uint32 ch2 = 3;
+  uint32 ch3 = 4;
+  uint32 ch4 = 5;
+  uint32 ch5 = 6;
+  uint32 ch6 = 7;
+  uint32 ch7 = 8;
+};
+
+message ADCData {
+  float ch0 = 1;
+  float ch1 = 2;
+  float ch2 = 3;
+  float ch3 = 4;
+  float ch4 = 5;
+  float ch5 = 6;
+  float ch6 = 7;
+  float ch7 = 8;
+  float ch8 = 9;
+  float ch9 = 10;
+  float ch10 = 11;
+  float ch11 = 12;
+  float ch12 = 13;
+  float ch13 = 14;
+  float ch14 = 15;
+  float ch15 = 16;
+};
+
+message ADCChannelNames {
+  string ch0 = 1;
+  string ch1 = 2;
+  string ch2 = 3;
+  string ch3 = 4;
+  string ch4 = 5;
+  string ch5 = 6;
+  string ch6 = 7;
+  string ch7 = 8;
+  string ch8 = 9;
+  string ch9 = 10;
+  string ch10 = 11;
+  string ch11 = 12;
+  string ch12 = 13;
+  string ch13 = 14;
+  string ch14 = 15;
+  string ch15 = 16;
+};
+
+enum ADCMode {
+  SOFTWARE_TRIGGERED = 0;
+  CONTINUOUS = 1;
+};
+
+message Range {
+  float min = 1;
+  float max = 2;
+};
+
+enum ProtectionType {
+  VOLTAGE_CURRENT = 0;
+  POWER = 1;
+};
+
+message PowerSafetyConfig {
+  ProtectionType protection_type = 1;
+  Range voltage_range = 2;
+  Range current_range = 3;
+  Range power_range = 4;
+};
+
+enum SafetyAction {
+  IGNORE = 0;
+  WARN = 1;
+  STOP = 2;
+};
+
+message ConverterConfig {
+  PowerSafetyConfig safety_config = 1;
+  SafetyAction safety_action = 2;
+};  
+
+// Main Configuration
+
+message WARPConfig {
+  ADCMode adc_mode = 1;
+  ConverterConfig conv1_config = 2;
+  ConverterConfig conv2_config = 3;
+};
+
+message WARPCommand {
+  PWMData pulse = 1;
+  bool conv1_enable = 2;
+  bool conv2_enable = 3;
+};
+
+message WARPRequest {
+  oneof request {
+    WARPConfig configuration = 1;
+    WARPCommand command = 2;
+  };
+};
+
+message WARPInfo {
+  string firmware_version = 1;
+  ADCChannelNames adc_channel_names = 2;
+};
+
+message WARPResponse {
+  oneof response {
+    WARPInfo info = 1;
+    ADCData adc_data = 2;
+  };
+};
