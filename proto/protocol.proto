@@ -1,7 +1,5 @@
 syntax = "proto3";
 
-syntax = "proto3";
-
 message PWMData {
   uint32 ch0 = 1;
   uint32 ch1 = 2;
