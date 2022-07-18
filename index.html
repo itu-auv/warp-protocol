@@ -179,19 +179,19 @@
             <ul>
               
                 <li>
-                  <a href="#.ADCChannelNames"><span class="badge">M</span>ADCChannelNames</a>
-                </li>
-              
-                <li>
                   <a href="#.ADCData"><span class="badge">M</span>ADCData</a>
                 </li>
               
                 <li>
-                  <a href="#.ConverterConfig"><span class="badge">M</span>ConverterConfig</a>
+                  <a href="#.PWMData"><span class="badge">M</span>PWMData</a>
                 </li>
               
                 <li>
-                  <a href="#.PWMData"><span class="badge">M</span>PWMData</a>
+                  <a href="#.PWMEnabled"><span class="badge">M</span>PWMEnabled</a>
+                </li>
+              
+                <li>
+                  <a href="#.PowerConfig"><span class="badge">M</span>PowerConfig</a>
                 </li>
               
                 <li>
@@ -222,6 +222,10 @@
                   <a href="#.WARPResponse"><span class="badge">M</span>WARPResponse</a>
                 </li>
               
+                <li>
+                  <a href="#.WARPSetEnabled"><span class="badge">M</span>WARPSetEnabled</a>
+                </li>
+              
               
                 <li>
                   <a href="#.ADCMode"><span class="badge">E</span>ADCMode</a>
@@ -233,6 +237,10 @@
               
                 <li>
                   <a href="#.SafetyAction"><span class="badge">E</span>SafetyAction</a>
+                </li>
+              
+                <li>
+                  <a href="#.WARPError"><span class="badge">E</span>WARPError</a>
                 </li>
               
               
@@ -249,140 +257,11 @@
       <div class="file-heading">
         <h2 id="protocol.proto">protocol.proto</h2><a href="#title">Top</a>
       </div>
-      <p></p>
+      <p>Copyright (c) 2022 ITU AUV Team</p><p>Permission is hereby granted, free of charge, to any person obtaining a copy</p><p>of this software and associated documentation files (the "Software"), to deal</p><p>in the Software without restriction, including without limitation the rights</p><p>to use, copy, modify, merge, publish, distribute, sublicense, and/or sell</p><p>copies of the Software, and to permit persons to whom the Software is</p><p>furnished to do so, subject to the following conditions:</p><p>The above copyright notice and this permission notice shall be included in</p><p>all copies or substantial portions of the Software.</p><p>THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR</p><p>IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,</p><p>FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE</p><p>AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER</p><p>LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,</p><p>OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE</p><p>SOFTWARE.</p>
 
-      
-        <h3 id=".ADCChannelNames">ADCChannelNames</h3>
-        <p></p>
-
-        
-          <table class="field-table">
-            <thead>
-              <tr><td>Field</td><td>Type</td><td>Label</td><td>Description</td></tr>
-            </thead>
-            <tbody>
-              
-                <tr>
-                  <td>ch0</td>
-                  <td><a href="#string">string</a></td>
-                  <td></td>
-                  <td><p> </p></td>
-                </tr>
-              
-                <tr>
-                  <td>ch1</td>
-                  <td><a href="#string">string</a></td>
-                  <td></td>
-                  <td><p> </p></td>
-                </tr>
-              
-                <tr>
-                  <td>ch2</td>
-                  <td><a href="#string">string</a></td>
-                  <td></td>
-                  <td><p> </p></td>
-                </tr>
-              
-                <tr>
-                  <td>ch3</td>
-                  <td><a href="#string">string</a></td>
-                  <td></td>
-                  <td><p> </p></td>
-                </tr>
-              
-                <tr>
-                  <td>ch4</td>
-                  <td><a href="#string">string</a></td>
-                  <td></td>
-                  <td><p> </p></td>
-                </tr>
-              
-                <tr>
-                  <td>ch5</td>
-                  <td><a href="#string">string</a></td>
-                  <td></td>
-                  <td><p> </p></td>
-                </tr>
-              
-                <tr>
-                  <td>ch6</td>
-                  <td><a href="#string">string</a></td>
-                  <td></td>
-                  <td><p> </p></td>
-                </tr>
-              
-                <tr>
-                  <td>ch7</td>
-                  <td><a href="#string">string</a></td>
-                  <td></td>
-                  <td><p> </p></td>
-                </tr>
-              
-                <tr>
-                  <td>ch8</td>
-                  <td><a href="#string">string</a></td>
-                  <td></td>
-                  <td><p> </p></td>
-                </tr>
-              
-                <tr>
-                  <td>ch9</td>
-                  <td><a href="#string">string</a></td>
-                  <td></td>
-                  <td><p> </p></td>
-                </tr>
-              
-                <tr>
-                  <td>ch10</td>
-                  <td><a href="#string">string</a></td>
-                  <td></td>
-                  <td><p> </p></td>
-                </tr>
-              
-                <tr>
-                  <td>ch11</td>
-                  <td><a href="#string">string</a></td>
-                  <td></td>
-                  <td><p> </p></td>
-                </tr>
-              
-                <tr>
-                  <td>ch12</td>
-                  <td><a href="#string">string</a></td>
-                  <td></td>
-                  <td><p> </p></td>
-                </tr>
-              
-                <tr>
-                  <td>ch13</td>
-                  <td><a href="#string">string</a></td>
-                  <td></td>
-                  <td><p> </p></td>
-                </tr>
-              
-                <tr>
-                  <td>ch14</td>
-                  <td><a href="#string">string</a></td>
-                  <td></td>
-                  <td><p> </p></td>
-                </tr>
-              
-                <tr>
-                  <td>ch15</td>
-                  <td><a href="#string">string</a></td>
-                  <td></td>
-                  <td><p> </p></td>
-                </tr>
-              
-            </tbody>
-          </table>
-
-          
-
-        
       
         <h3 id=".ADCData">ADCData</h3>
-        <p></p>
+        <p>ADC Channel Data Message</p>
 
         
           <table class="field-table">
@@ -395,110 +274,256 @@
                   <td>ch0</td>
                   <td><a href="#float">float</a></td>
                   <td></td>
-                  <td><p> </p></td>
+                  <td><p>ADS1115 Channel 0 voltage </p></td>
                 </tr>
               
                 <tr>
                   <td>ch1</td>
                   <td><a href="#float">float</a></td>
                   <td></td>
-                  <td><p> </p></td>
+                  <td><p>ADS1115 Channel 1 voltage </p></td>
                 </tr>
               
                 <tr>
                   <td>ch2</td>
                   <td><a href="#float">float</a></td>
                   <td></td>
-                  <td><p> </p></td>
+                  <td><p>ADS1115 Channel 2 voltage </p></td>
                 </tr>
               
                 <tr>
                   <td>ch3</td>
                   <td><a href="#float">float</a></td>
                   <td></td>
-                  <td><p> </p></td>
+                  <td><p>ADS1115 Channel 3 voltage </p></td>
                 </tr>
               
                 <tr>
                   <td>ch4</td>
                   <td><a href="#float">float</a></td>
                   <td></td>
-                  <td><p> </p></td>
+                  <td><p>ADS1115 Channel 4 voltage </p></td>
                 </tr>
               
                 <tr>
                   <td>ch5</td>
                   <td><a href="#float">float</a></td>
                   <td></td>
-                  <td><p> </p></td>
+                  <td><p>ADS1115 Channel 5 voltage </p></td>
                 </tr>
               
                 <tr>
                   <td>ch6</td>
                   <td><a href="#float">float</a></td>
                   <td></td>
-                  <td><p> </p></td>
+                  <td><p>ADS1115 Channel 6 voltage </p></td>
                 </tr>
               
                 <tr>
                   <td>ch7</td>
                   <td><a href="#float">float</a></td>
                   <td></td>
-                  <td><p> </p></td>
+                  <td><p>ADS1115 Channel 7 voltage </p></td>
                 </tr>
               
                 <tr>
                   <td>ch8</td>
                   <td><a href="#float">float</a></td>
                   <td></td>
-                  <td><p> </p></td>
+                  <td><p>ADS1115 Channel 8 voltage </p></td>
                 </tr>
               
                 <tr>
                   <td>ch9</td>
                   <td><a href="#float">float</a></td>
                   <td></td>
-                  <td><p> </p></td>
+                  <td><p>ADS1115 Channel 9 voltage </p></td>
                 </tr>
               
                 <tr>
                   <td>ch10</td>
                   <td><a href="#float">float</a></td>
                   <td></td>
-                  <td><p> </p></td>
+                  <td><p>ADS1115 Channel 10 voltage </p></td>
                 </tr>
               
                 <tr>
                   <td>ch11</td>
                   <td><a href="#float">float</a></td>
                   <td></td>
-                  <td><p> </p></td>
+                  <td><p>ADS1115 Channel 11 voltage </p></td>
                 </tr>
               
                 <tr>
                   <td>ch12</td>
                   <td><a href="#float">float</a></td>
                   <td></td>
-                  <td><p> </p></td>
+                  <td><p>ADS1115 Channel 12 voltage </p></td>
                 </tr>
               
                 <tr>
                   <td>ch13</td>
                   <td><a href="#float">float</a></td>
                   <td></td>
-                  <td><p> </p></td>
+                  <td><p>ADS1115 Channel 13 voltage </p></td>
                 </tr>
               
                 <tr>
                   <td>ch14</td>
                   <td><a href="#float">float</a></td>
                   <td></td>
-                  <td><p> </p></td>
+                  <td><p>ADS1115 Channel 14 voltage </p></td>
                 </tr>
               
                 <tr>
                   <td>ch15</td>
                   <td><a href="#float">float</a></td>
+                  <td></td>
+                  <td><p>ADS1115 Channel 15 voltage </p></td>
+                </tr>
+              
+            </tbody>
+          </table>
+
+          
+
+        
+      
+        <h3 id=".PWMData">PWMData</h3>
+        <p>PWM Pulse Message</p>
+
+        
+          <table class="field-table">
+            <thead>
+              <tr><td>Field</td><td>Type</td><td>Label</td><td>Description</td></tr>
+            </thead>
+            <tbody>
+              
+                <tr>
+                  <td>ch0</td>
+                  <td><a href="#uint32">uint32</a></td>
+                  <td></td>
+                  <td><p>Channel 0 PWM Pulse, uS </p></td>
+                </tr>
+              
+                <tr>
+                  <td>ch1</td>
+                  <td><a href="#uint32">uint32</a></td>
+                  <td></td>
+                  <td><p>Channel 1 PWM Pulse, uS </p></td>
+                </tr>
+              
+                <tr>
+                  <td>ch2</td>
+                  <td><a href="#uint32">uint32</a></td>
+                  <td></td>
+                  <td><p>Channel 2 PWM Pulse, uS </p></td>
+                </tr>
+              
+                <tr>
+                  <td>ch3</td>
+                  <td><a href="#uint32">uint32</a></td>
+                  <td></td>
+                  <td><p>Channel 3 PWM Pulse, uS </p></td>
+                </tr>
+              
+                <tr>
+                  <td>ch4</td>
+                  <td><a href="#uint32">uint32</a></td>
+                  <td></td>
+                  <td><p>Channel 4 PWM Pulse, uS </p></td>
+                </tr>
+              
+                <tr>
+                  <td>ch5</td>
+                  <td><a href="#uint32">uint32</a></td>
+                  <td></td>
+                  <td><p>Channel 5 PWM Pulse, uS </p></td>
+                </tr>
+              
+                <tr>
+                  <td>ch6</td>
+                  <td><a href="#uint32">uint32</a></td>
+                  <td></td>
+                  <td><p>Channel 6 PWM Pulse, uS </p></td>
+                </tr>
+              
+                <tr>
+                  <td>ch7</td>
+                  <td><a href="#uint32">uint32</a></td>
+                  <td></td>
+                  <td><p>Channel 7 PWM Pulse, uS </p></td>
+                </tr>
+              
+            </tbody>
+          </table>
+
+          
+
+        
+      
+        <h3 id=".PWMEnabled">PWMEnabled</h3>
+        <p></p>
+
+        
+          <table class="field-table">
+            <thead>
+              <tr><td>Field</td><td>Type</td><td>Label</td><td>Description</td></tr>
+            </thead>
+            <tbody>
+              
+                <tr>
+                  <td>ch0</td>
+                  <td><a href="#bool">bool</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>ch1</td>
+                  <td><a href="#bool">bool</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>ch2</td>
+                  <td><a href="#bool">bool</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>ch3</td>
+                  <td><a href="#bool">bool</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>ch4</td>
+                  <td><a href="#bool">bool</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>ch5</td>
+                  <td><a href="#bool">bool</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>ch6</td>
+                  <td><a href="#bool">bool</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>ch7</td>
+                  <td><a href="#bool">bool</a></td>
                   <td></td>
                   <td><p> </p></td>
                 </tr>
@@ -510,8 +535,8 @@
 
         
       
-        <h3 id=".ConverterConfig">ConverterConfig</h3>
-        <p></p>
+        <h3 id=".PowerConfig">PowerConfig</h3>
+        <p>This is used to define converter configuration.</p>
 
         
           <table class="field-table">
@@ -541,81 +566,8 @@
 
         
       
-        <h3 id=".PWMData">PWMData</h3>
-        <p></p>
-
-        
-          <table class="field-table">
-            <thead>
-              <tr><td>Field</td><td>Type</td><td>Label</td><td>Description</td></tr>
-            </thead>
-            <tbody>
-              
-                <tr>
-                  <td>ch0</td>
-                  <td><a href="#uint32">uint32</a></td>
-                  <td></td>
-                  <td><p> </p></td>
-                </tr>
-              
-                <tr>
-                  <td>ch1</td>
-                  <td><a href="#uint32">uint32</a></td>
-                  <td></td>
-                  <td><p> </p></td>
-                </tr>
-              
-                <tr>
-                  <td>ch2</td>
-                  <td><a href="#uint32">uint32</a></td>
-                  <td></td>
-                  <td><p> </p></td>
-                </tr>
-              
-                <tr>
-                  <td>ch3</td>
-                  <td><a href="#uint32">uint32</a></td>
-                  <td></td>
-                  <td><p> </p></td>
-                </tr>
-              
-                <tr>
-                  <td>ch4</td>
-                  <td><a href="#uint32">uint32</a></td>
-                  <td></td>
-                  <td><p> </p></td>
-                </tr>
-              
-                <tr>
-                  <td>ch5</td>
-                  <td><a href="#uint32">uint32</a></td>
-                  <td></td>
-                  <td><p> </p></td>
-                </tr>
-              
-                <tr>
-                  <td>ch6</td>
-                  <td><a href="#uint32">uint32</a></td>
-                  <td></td>
-                  <td><p> </p></td>
-                </tr>
-              
-                <tr>
-                  <td>ch7</td>
-                  <td><a href="#uint32">uint32</a></td>
-                  <td></td>
-                  <td><p> </p></td>
-                </tr>
-              
-            </tbody>
-          </table>
-
-          
-
-        
-      
         <h3 id=".PowerSafetyConfig">PowerSafetyConfig</h3>
-        <p></p>
+        <p>Converter Power Safety Configuration</p><p>This is used to define the power safety configuration for the converter.</p><p>protection_type is used to define the behavior of the converter when the</p><p>"input power" or the "Current or Voltage" is outside of the defined range.</p><p>voltage_range & current_range are ONLY USED IF protection_type =</p><p>VOLTAGE_CURRENT power_range is ONLY USED IF protection_type = POWER</p>
 
         
           <table class="field-table">
@@ -628,28 +580,28 @@
                   <td>protection_type</td>
                   <td><a href="#ProtectionType">ProtectionType</a></td>
                   <td></td>
-                  <td><p> </p></td>
+                  <td><p>Protection Type </p></td>
                 </tr>
               
                 <tr>
                   <td>voltage_range</td>
                   <td><a href="#Range">Range</a></td>
                   <td></td>
-                  <td><p> </p></td>
+                  <td><p>Voltage range </p></td>
                 </tr>
               
                 <tr>
                   <td>current_range</td>
                   <td><a href="#Range">Range</a></td>
                   <td></td>
-                  <td><p> </p></td>
+                  <td><p>Current range </p></td>
                 </tr>
               
                 <tr>
                   <td>power_range</td>
                   <td><a href="#Range">Range</a></td>
                   <td></td>
-                  <td><p> </p></td>
+                  <td><p>Power range </p></td>
                 </tr>
               
             </tbody>
@@ -660,7 +612,7 @@
         
       
         <h3 id=".Range">Range</h3>
-        <p></p>
+        <p>Common Range Type</p>
 
         
           <table class="field-table">
@@ -673,14 +625,14 @@
                   <td>min</td>
                   <td><a href="#float">float</a></td>
                   <td></td>
-                  <td><p> </p></td>
+                  <td><p>Minimum value </p></td>
                 </tr>
               
                 <tr>
                   <td>max</td>
                   <td><a href="#float">float</a></td>
                   <td></td>
-                  <td><p> </p></td>
+                  <td><p>Maximum value </p></td>
                 </tr>
               
             </tbody>
@@ -691,7 +643,7 @@
         
       
         <h3 id=".WARPCommand">WARPCommand</h3>
-        <p></p>
+        <p>This is used to command the WARP board.</p>
 
         
           <table class="field-table">
@@ -704,21 +656,7 @@
                   <td>pulse</td>
                   <td><a href="#PWMData">PWMData</a></td>
                   <td></td>
-                  <td><p> </p></td>
-                </tr>
-              
-                <tr>
-                  <td>conv1_enable</td>
-                  <td><a href="#bool">bool</a></td>
-                  <td></td>
-                  <td><p> </p></td>
-                </tr>
-              
-                <tr>
-                  <td>conv2_enable</td>
-                  <td><a href="#bool">bool</a></td>
-                  <td></td>
-                  <td><p> </p></td>
+                  <td><p>used to command PWM channels </p></td>
                 </tr>
               
             </tbody>
@@ -729,7 +667,7 @@
         
       
         <h3 id=".WARPConfig">WARPConfig</h3>
-        <p></p>
+        <p>This is used to configure the WARP board.</p>
 
         
           <table class="field-table">
@@ -742,21 +680,77 @@
                   <td>adc_mode</td>
                   <td><a href="#ADCMode">ADCMode</a></td>
                   <td></td>
-                  <td><p> </p></td>
+                  <td><p>used to configure operation mode of ADC. </p></td>
                 </tr>
               
                 <tr>
                   <td>conv1_config</td>
-                  <td><a href="#ConverterConfig">ConverterConfig</a></td>
+                  <td><a href="#PowerConfig">PowerConfig</a></td>
                   <td></td>
-                  <td><p> </p></td>
+                  <td><p>used to configure converter 1 </p></td>
                 </tr>
               
                 <tr>
                   <td>conv2_config</td>
-                  <td><a href="#ConverterConfig">ConverterConfig</a></td>
+                  <td><a href="#PowerConfig">PowerConfig</a></td>
                   <td></td>
-                  <td><p> </p></td>
+                  <td><p>used to configure converter 2 </p></td>
+                </tr>
+              
+                <tr>
+                  <td>ch0_config</td>
+                  <td><a href="#PowerConfig">PowerConfig</a></td>
+                  <td></td>
+                  <td><p>used to configure channel 0 </p></td>
+                </tr>
+              
+                <tr>
+                  <td>ch1_config</td>
+                  <td><a href="#PowerConfig">PowerConfig</a></td>
+                  <td></td>
+                  <td><p>used to configure channel 1 </p></td>
+                </tr>
+              
+                <tr>
+                  <td>ch2_config</td>
+                  <td><a href="#PowerConfig">PowerConfig</a></td>
+                  <td></td>
+                  <td><p>used to configure channel 2 </p></td>
+                </tr>
+              
+                <tr>
+                  <td>ch3_config</td>
+                  <td><a href="#PowerConfig">PowerConfig</a></td>
+                  <td></td>
+                  <td><p>used to configure channel 3 </p></td>
+                </tr>
+              
+                <tr>
+                  <td>ch4_config</td>
+                  <td><a href="#PowerConfig">PowerConfig</a></td>
+                  <td></td>
+                  <td><p>used to configure channel 4 </p></td>
+                </tr>
+              
+                <tr>
+                  <td>ch5_config</td>
+                  <td><a href="#PowerConfig">PowerConfig</a></td>
+                  <td></td>
+                  <td><p>used to configure channel 5 </p></td>
+                </tr>
+              
+                <tr>
+                  <td>ch6_config</td>
+                  <td><a href="#PowerConfig">PowerConfig</a></td>
+                  <td></td>
+                  <td><p>used to configure channel 6 </p></td>
+                </tr>
+              
+                <tr>
+                  <td>ch7_config</td>
+                  <td><a href="#PowerConfig">PowerConfig</a></td>
+                  <td></td>
+                  <td><p>used to configure channel 7 </p></td>
                 </tr>
               
             </tbody>
@@ -767,7 +761,7 @@
         
       
         <h3 id=".WARPInfo">WARPInfo</h3>
-        <p></p>
+        <p>This is used to report  information from the WARP board.</p>
 
         
           <table class="field-table">
@@ -778,16 +772,9 @@
               
                 <tr>
                   <td>firmware_version</td>
-                  <td><a href="#string">string</a></td>
+                  <td><a href="#uint32">uint32</a></td>
                   <td></td>
-                  <td><p> </p></td>
-                </tr>
-              
-                <tr>
-                  <td>adc_channel_names</td>
-                  <td><a href="#ADCChannelNames">ADCChannelNames</a></td>
-                  <td></td>
-                  <td><p> </p></td>
+                  <td><p>First 2 bytes are the major version, second 2 </p></td>
                 </tr>
               
             </tbody>
@@ -798,7 +785,7 @@
         
       
         <h3 id=".WARPRequest">WARPRequest</h3>
-        <p></p>
+        <p>This is the main request message used to communicate with the WARP board.</p><p>This message is sent from HOST to WARP board.</p><p>One of the fields under "request" field is used at each time.</p>
 
         
           <table class="field-table">
@@ -808,15 +795,74 @@
             <tbody>
               
                 <tr>
-                  <td>configuration</td>
-                  <td><a href="#WARPConfig">WARPConfig</a></td>
+                  <td>time</td>
+                  <td><a href="#uint32">uint32</a></td>
                   <td></td>
                   <td><p> </p></td>
                 </tr>
               
                 <tr>
+                  <td>configuration</td>
+                  <td><a href="#WARPConfig">WARPConfig</a></td>
+                  <td></td>
+                  <td><p>configuration field </p></td>
+                </tr>
+              
+                <tr>
+                  <td>set_enabled</td>
+                  <td><a href="#WARPSetEnabled">WARPSetEnabled</a></td>
+                  <td></td>
+                  <td><p>set enabled field </p></td>
+                </tr>
+              
+                <tr>
                   <td>command</td>
                   <td><a href="#WARPCommand">WARPCommand</a></td>
+                  <td></td>
+                  <td><p>command field </p></td>
+                </tr>
+              
+            </tbody>
+          </table>
+
+          
+
+        
+      
+        <h3 id=".WARPResponse">WARPResponse</h3>
+        <p>This is the main response message used to communicate with the WARP board.</p><p>This message is sent from WARP board to HOST.</p><p>One of the fields under "response" field is used at each time.</p>
+
+        
+          <table class="field-table">
+            <thead>
+              <tr><td>Field</td><td>Type</td><td>Label</td><td>Description</td></tr>
+            </thead>
+            <tbody>
+              
+                <tr>
+                  <td>time</td>
+                  <td><a href="#uint32">uint32</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>info</td>
+                  <td><a href="#WARPInfo">WARPInfo</a></td>
+                  <td></td>
+                  <td><p>information of the WARP board </p></td>
+                </tr>
+              
+                <tr>
+                  <td>adc_data</td>
+                  <td><a href="#ADCData">ADCData</a></td>
+                  <td></td>
+                  <td><p>adc data </p></td>
+                </tr>
+              
+                <tr>
+                  <td>error</td>
+                  <td><a href="#WARPError">WARPError</a></td>
                   <td></td>
                   <td><p> </p></td>
                 </tr>
@@ -828,7 +874,7 @@
 
         
       
-        <h3 id=".WARPResponse">WARPResponse</h3>
+        <h3 id=".WARPSetEnabled">WARPSetEnabled</h3>
         <p></p>
 
         
@@ -839,17 +885,24 @@
             <tbody>
               
                 <tr>
-                  <td>info</td>
-                  <td><a href="#WARPInfo">WARPInfo</a></td>
+                  <td>pwm_enable</td>
+                  <td><a href="#PWMEnabled">PWMEnabled</a></td>
                   <td></td>
-                  <td><p> </p></td>
+                  <td><p>enable/disable PWM channels </p></td>
                 </tr>
               
                 <tr>
-                  <td>adc_data</td>
-                  <td><a href="#ADCData">ADCData</a></td>
+                  <td>conv1_enable</td>
+                  <td><a href="#bool">bool</a></td>
                   <td></td>
-                  <td><p> </p></td>
+                  <td><p>enable/disable converter 1 </p></td>
+                </tr>
+              
+                <tr>
+                  <td>conv2_enable</td>
+                  <td><a href="#bool">bool</a></td>
+                  <td></td>
+                  <td><p>enable/disable converter 2 </p></td>
                 </tr>
               
             </tbody>
@@ -862,7 +915,7 @@
 
       
         <h3 id=".ADCMode">ADCMode</h3>
-        <p></p>
+        <p>ADC Operation Mode</p>
         <table class="enum-table">
           <thead>
             <tr><td>Name</td><td>Number</td><td>Description</td></tr>
@@ -872,20 +925,20 @@
               <tr>
                 <td>SOFTWARE_TRIGGERED</td>
                 <td>0</td>
-                <td><p></p></td>
+                <td><p>ADC is triggered by software</p></td>
               </tr>
             
               <tr>
                 <td>CONTINUOUS</td>
                 <td>1</td>
-                <td><p></p></td>
+                <td><p>ADC is triggered continuously</p></td>
               </tr>
             
           </tbody>
         </table>
       
         <h3 id=".ProtectionType">ProtectionType</h3>
-        <p></p>
+        <p>Converter Protection Type</p><p>This is used to define the protection type for the converter.</p><p>(Voltage & Current)</p><p>The protection type is used to determine the behavior of the converter</p><p>when the input voltage or the current is outside of the defined range.</p><p>(Power)</p><p>The protection type is used to determine the behavior of the converter</p><p>when the input power is outside of the defined range.</p>
         <table class="enum-table">
           <thead>
             <tr><td>Name</td><td>Number</td><td>Description</td></tr>
@@ -895,20 +948,20 @@
               <tr>
                 <td>VOLTAGE_CURRENT</td>
                 <td>0</td>
-                <td><p></p></td>
+                <td><p>Limiting by Voltage and Current</p></td>
               </tr>
             
               <tr>
                 <td>POWER</td>
                 <td>1</td>
-                <td><p></p></td>
+                <td><p>Limiting by Power</p></td>
               </tr>
             
           </tbody>
         </table>
       
         <h3 id=".SafetyAction">SafetyAction</h3>
-        <p></p>
+        <p>This is used to define the behavior, when the safety system is engaged.</p>
         <table class="enum-table">
           <thead>
             <tr><td>Name</td><td>Number</td><td>Description</td></tr>
@@ -918,19 +971,420 @@
               <tr>
                 <td>IGNORE</td>
                 <td>0</td>
-                <td><p></p></td>
+                <td><p>No action, ignore</p></td>
               </tr>
             
               <tr>
                 <td>WARN</td>
                 <td>1</td>
-                <td><p></p></td>
+                <td><p>No action, but warn the user</p></td>
               </tr>
             
               <tr>
                 <td>STOP</td>
                 <td>2</td>
-                <td><p></p></td>
+                <td><p>Shutdown the converter</p></td>
+              </tr>
+            
+          </tbody>
+        </table>
+      
+        <h3 id=".WARPError">WARPError</h3>
+        <p></p>
+        <table class="enum-table">
+          <thead>
+            <tr><td>Name</td><td>Number</td><td>Description</td></tr>
+          </thead>
+          <tbody>
+            
+              <tr>
+                <td>NO_ERROR</td>
+                <td>0</td>
+                <td><p>No error</p></td>
+              </tr>
+            
+              <tr>
+                <td>CONV1_OVERVOLTAGE</td>
+                <td>1</td>
+                <td><p>converter 1 overvoltage</p></td>
+              </tr>
+            
+              <tr>
+                <td>CONV1_UNDERVOLTAGE</td>
+                <td>2</td>
+                <td><p>conveter1 undervoltage</p></td>
+              </tr>
+            
+              <tr>
+                <td>CONV1_OVERCURRENT</td>
+                <td>3</td>
+                <td><p>converter 1 overcurrent</p></td>
+              </tr>
+            
+              <tr>
+                <td>CONV1_UNDERCURRENT</td>
+                <td>4</td>
+                <td><p>converter 1 undercurrent</p></td>
+              </tr>
+            
+              <tr>
+                <td>CONV1_OVERPOWER</td>
+                <td>5</td>
+                <td><p>converter 1 overpower</p></td>
+              </tr>
+            
+              <tr>
+                <td>CONV1_UNDERPOWER</td>
+                <td>6</td>
+                <td><p>converter 1 underpower</p></td>
+              </tr>
+            
+              <tr>
+                <td>CONV2_OVERVOLTAGE</td>
+                <td>7</td>
+                <td><p>converter 2 overvoltage</p></td>
+              </tr>
+            
+              <tr>
+                <td>CONV2_UNDERVOLTAGE</td>
+                <td>8</td>
+                <td><p>conveter2 undervoltage</p></td>
+              </tr>
+            
+              <tr>
+                <td>CONV2_OVERCURRENT</td>
+                <td>9</td>
+                <td><p>converter 2 overcurrent</p></td>
+              </tr>
+            
+              <tr>
+                <td>CONV2_UNDERCURRENT</td>
+                <td>10</td>
+                <td><p>converter 2 undercurrent</p></td>
+              </tr>
+            
+              <tr>
+                <td>CONV2_OVERPOWER</td>
+                <td>11</td>
+                <td><p>converter 2 overpower</p></td>
+              </tr>
+            
+              <tr>
+                <td>CONV2_UNDERPOWER</td>
+                <td>12</td>
+                <td><p>converter 2 underpower</p></td>
+              </tr>
+            
+              <tr>
+                <td>CH0_OVERVOLTAGE</td>
+                <td>13</td>
+                <td><p>channel 0 overvoltage</p></td>
+              </tr>
+            
+              <tr>
+                <td>CH0_UNDERVOLTAGE</td>
+                <td>14</td>
+                <td><p>channel 0 undervoltage</p></td>
+              </tr>
+            
+              <tr>
+                <td>CH0_OVERCURRENT</td>
+                <td>15</td>
+                <td><p>channel 0 overcurrent</p></td>
+              </tr>
+            
+              <tr>
+                <td>CH0_UNDERCURRENT</td>
+                <td>16</td>
+                <td><p>channel 0 undercurrent</p></td>
+              </tr>
+            
+              <tr>
+                <td>CH0_OVERPOWER</td>
+                <td>17</td>
+                <td><p>channel 0 overpower</p></td>
+              </tr>
+            
+              <tr>
+                <td>CH0_UNDERPOWER</td>
+                <td>18</td>
+                <td><p>channel 0 underpower</p></td>
+              </tr>
+            
+              <tr>
+                <td>CH1_OVERVOLTAGE</td>
+                <td>19</td>
+                <td><p>channel 1 overvoltage</p></td>
+              </tr>
+            
+              <tr>
+                <td>CH1_UNDERVOLTAGE</td>
+                <td>20</td>
+                <td><p>channel 1 undervoltage</p></td>
+              </tr>
+            
+              <tr>
+                <td>CH1_OVERCURRENT</td>
+                <td>21</td>
+                <td><p>channel 1 overcurrent</p></td>
+              </tr>
+            
+              <tr>
+                <td>CH1_UNDERCURRENT</td>
+                <td>22</td>
+                <td><p>channel 1 undercurrent</p></td>
+              </tr>
+            
+              <tr>
+                <td>CH1_OVERPOWER</td>
+                <td>23</td>
+                <td><p>channel 1 overpower</p></td>
+              </tr>
+            
+              <tr>
+                <td>CH1_UNDERPOWER</td>
+                <td>24</td>
+                <td><p>channel 1 underpower</p></td>
+              </tr>
+            
+              <tr>
+                <td>CH2_OVERVOLTAGE</td>
+                <td>25</td>
+                <td><p>channel 2 overvoltage</p></td>
+              </tr>
+            
+              <tr>
+                <td>CH2_UNDERVOLTAGE</td>
+                <td>26</td>
+                <td><p>channel 2 undervoltage</p></td>
+              </tr>
+            
+              <tr>
+                <td>CH2_OVERCURRENT</td>
+                <td>27</td>
+                <td><p>channel 2 overcurrent</p></td>
+              </tr>
+            
+              <tr>
+                <td>CH2_UNDERCURRENT</td>
+                <td>28</td>
+                <td><p>channel 2 undercurrent</p></td>
+              </tr>
+            
+              <tr>
+                <td>CH2_OVERPOWER</td>
+                <td>29</td>
+                <td><p>channel 2 overpower</p></td>
+              </tr>
+            
+              <tr>
+                <td>CH2_UNDERPOWER</td>
+                <td>30</td>
+                <td><p>channel 2 underpower</p></td>
+              </tr>
+            
+              <tr>
+                <td>CH3_OVERVOLTAGE</td>
+                <td>31</td>
+                <td><p>channel 3 overvoltage</p></td>
+              </tr>
+            
+              <tr>
+                <td>CH3_UNDERVOLTAGE</td>
+                <td>32</td>
+                <td><p>channel 3 undervoltage</p></td>
+              </tr>
+            
+              <tr>
+                <td>CH3_OVERCURRENT</td>
+                <td>33</td>
+                <td><p>channel 3 overcurrent</p></td>
+              </tr>
+            
+              <tr>
+                <td>CH3_UNDERCURRENT</td>
+                <td>34</td>
+                <td><p>channel 3 undercurrent</p></td>
+              </tr>
+            
+              <tr>
+                <td>CH3_OVERPOWER</td>
+                <td>35</td>
+                <td><p>channel 3 overpower</p></td>
+              </tr>
+            
+              <tr>
+                <td>CH3_UNDERPOWER</td>
+                <td>36</td>
+                <td><p>channel 3 underpower</p></td>
+              </tr>
+            
+              <tr>
+                <td>CH4_OVERVOLTAGE</td>
+                <td>37</td>
+                <td><p>channel 4 overvoltage</p></td>
+              </tr>
+            
+              <tr>
+                <td>CH4_UNDERVOLTAGE</td>
+                <td>38</td>
+                <td><p>channel 4 undervoltage</p></td>
+              </tr>
+            
+              <tr>
+                <td>CH4_OVERCURRENT</td>
+                <td>39</td>
+                <td><p>channel 4 overcurrent</p></td>
+              </tr>
+            
+              <tr>
+                <td>CH4_UNDERCURRENT</td>
+                <td>40</td>
+                <td><p>channel 4 undercurrent</p></td>
+              </tr>
+            
+              <tr>
+                <td>CH4_OVERPOWER</td>
+                <td>41</td>
+                <td><p>channel 4 overpower</p></td>
+              </tr>
+            
+              <tr>
+                <td>CH4_UNDERPOWER</td>
+                <td>42</td>
+                <td><p>channel 4 underpower</p></td>
+              </tr>
+            
+              <tr>
+                <td>CH5_OVERVOLTAGE</td>
+                <td>43</td>
+                <td><p>channel 5 overvoltage</p></td>
+              </tr>
+            
+              <tr>
+                <td>CH5_UNDERVOLTAGE</td>
+                <td>44</td>
+                <td><p>channel 5 undervoltage</p></td>
+              </tr>
+            
+              <tr>
+                <td>CH5_OVERCURRENT</td>
+                <td>45</td>
+                <td><p>channel 5 overcurrent</p></td>
+              </tr>
+            
+              <tr>
+                <td>CH5_UNDERCURRENT</td>
+                <td>46</td>
+                <td><p>channel 5 undercurrent</p></td>
+              </tr>
+            
+              <tr>
+                <td>CH5_OVERPOWER</td>
+                <td>47</td>
+                <td><p>channel 5 overpower</p></td>
+              </tr>
+            
+              <tr>
+                <td>CH5_UNDERPOWER</td>
+                <td>48</td>
+                <td><p>channel 5 underpower</p></td>
+              </tr>
+            
+              <tr>
+                <td>CH6_OVERVOLTAGE</td>
+                <td>49</td>
+                <td><p>channel 6 overvoltage</p></td>
+              </tr>
+            
+              <tr>
+                <td>CH6_UNDERVOLTAGE</td>
+                <td>50</td>
+                <td><p>channel 6 undervoltage</p></td>
+              </tr>
+            
+              <tr>
+                <td>CH6_OVERCURRENT</td>
+                <td>51</td>
+                <td><p>channel 6 overcurrent</p></td>
+              </tr>
+            
+              <tr>
+                <td>CH6_UNDERCURRENT</td>
+                <td>52</td>
+                <td><p>channel 6 undercurrent</p></td>
+              </tr>
+            
+              <tr>
+                <td>CH6_OVERPOWER</td>
+                <td>53</td>
+                <td><p>channel 6 overpower</p></td>
+              </tr>
+            
+              <tr>
+                <td>CH6_UNDERPOWER</td>
+                <td>54</td>
+                <td><p>channel 6 underpower</p></td>
+              </tr>
+            
+              <tr>
+                <td>CH7_OVERVOLTAGE</td>
+                <td>55</td>
+                <td><p>channel 7 overvoltage</p></td>
+              </tr>
+            
+              <tr>
+                <td>CH7_UNDERVOLTAGE</td>
+                <td>56</td>
+                <td><p>channel 7 undervoltage</p></td>
+              </tr>
+            
+              <tr>
+                <td>CH7_OVERCURRENT</td>
+                <td>57</td>
+                <td><p>channel 7 overcurrent</p></td>
+              </tr>
+            
+              <tr>
+                <td>CH7_UNDERCURRENT</td>
+                <td>58</td>
+                <td><p>channel 7 undercurrent</p></td>
+              </tr>
+            
+              <tr>
+                <td>CH7_OVERPOWER</td>
+                <td>59</td>
+                <td><p>channel 7 overpower</p></td>
+              </tr>
+            
+              <tr>
+                <td>CH7_UNDERPOWER</td>
+                <td>60</td>
+                <td><p>channel 7 underpower</p></td>
+              </tr>
+            
+              <tr>
+                <td>ADS1_ERROR</td>
+                <td>61</td>
+                <td><p>ADC1 error</p></td>
+              </tr>
+            
+              <tr>
+                <td>ADS2_ERROR</td>
+                <td>62</td>
+                <td><p>ADC2 error</p></td>
+              </tr>
+            
+              <tr>
+                <td>ADS3_ERROR</td>
+                <td>63</td>
+                <td><p>ADC3 error</p></td>
+              </tr>
+            
+              <tr>
+                <td>ADS4_ERROR</td>
+                <td>64</td>
+                <td><p>ADC4 error</p></td>
               </tr>
             
           </tbody>
