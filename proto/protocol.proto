@@ -1,116 +1,274 @@
+/**
+ * Copyright (c) 2022 ITU AUV Team
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+ * SOFTWARE.
+ */
 syntax = "proto3";
 
+/**
+ * PWM Pulse Message
+ */
 message PWMData {
-  uint32 ch0 = 1;
-  uint32 ch1 = 2;
-  uint32 ch2 = 3;
-  uint32 ch3 = 4;
-  uint32 ch4 = 5;
-  uint32 ch5 = 6;
-  uint32 ch6 = 7;
-  uint32 ch7 = 8;
+  uint32 ch0 = 1; // Channel 0 PWM Pulse, uS
+  uint32 ch1 = 2; // Channel 1 PWM Pulse, uS
+  uint32 ch2 = 3; // Channel 2 PWM Pulse, uS
+  uint32 ch3 = 4; // Channel 3 PWM Pulse, uS
+  uint32 ch4 = 5; // Channel 4 PWM Pulse, uS
+  uint32 ch5 = 6; // Channel 5 PWM Pulse, uS
+  uint32 ch6 = 7; // Channel 6 PWM Pulse, uS
+  uint32 ch7 = 8; // Channel 7 PWM Pulse, uS
 };
 
+message PWMEnabled {
+  bool ch0 = 1;
+  bool ch1 = 2;
+  bool ch2 = 3;
+  bool ch3 = 4;
+  bool ch4 = 5;
+  bool ch5 = 6;
+  bool ch6 = 7;
+  bool ch7 = 8;
+};
+
+/**
+ * ADC Channel Data Message
+ */
 message ADCData {
-  float ch0 = 1;
-  float ch1 = 2;
-  float ch2 = 3;
-  float ch3 = 4;
-  float ch4 = 5;
-  float ch5 = 6;
-  float ch6 = 7;
-  float ch7 = 8;
-  float ch8 = 9;
-  float ch9 = 10;
-  float ch10 = 11;
-  float ch11 = 12;
-  float ch12 = 13;
-  float ch13 = 14;
-  float ch14 = 15;
-  float ch15 = 16;
+  float ch0 = 1;   // ADS1115 Channel 0 voltage
+  float ch1 = 2;   // ADS1115 Channel 1 voltage
+  float ch2 = 3;   // ADS1115 Channel 2 voltage
+  float ch3 = 4;   // ADS1115 Channel 3 voltage
+  float ch4 = 5;   // ADS1115 Channel 4 voltage
+  float ch5 = 6;   // ADS1115 Channel 5 voltage
+  float ch6 = 7;   // ADS1115 Channel 6 voltage
+  float ch7 = 8;   // ADS1115 Channel 7 voltage
+  float ch8 = 9;   // ADS1115 Channel 8 voltage
+  float ch9 = 10;  // ADS1115 Channel 9 voltage
+  float ch10 = 11; // ADS1115 Channel 10 voltage
+  float ch11 = 12; // ADS1115 Channel 11 voltage
+  float ch12 = 13; // ADS1115 Channel 12 voltage
+  float ch13 = 14; // ADS1115 Channel 13 voltage
+  float ch14 = 15; // ADS1115 Channel 14 voltage
+  float ch15 = 16; // ADS1115 Channel 15 voltage
 };
 
-message ADCChannelNames {
-  string ch0 = 1;
-  string ch1 = 2;
-  string ch2 = 3;
-  string ch3 = 4;
-  string ch4 = 5;
-  string ch5 = 6;
-  string ch6 = 7;
-  string ch7 = 8;
-  string ch8 = 9;
-  string ch9 = 10;
-  string ch10 = 11;
-  string ch11 = 12;
-  string ch12 = 13;
-  string ch13 = 14;
-  string ch14 = 15;
-  string ch15 = 16;
-};
-
+/**
+ * ADC Operation Mode
+ */
 enum ADCMode {
-  SOFTWARE_TRIGGERED = 0;
-  CONTINUOUS = 1;
+  SOFTWARE_TRIGGERED = 0; /// ADC is triggered by software
+  CONTINUOUS = 1;         /// ADC is triggered continuously
 };
 
+/**
+ * Common Range Type
+ */
 message Range {
-  float min = 1;
-  float max = 2;
+  float min = 1; // Minimum value
+  float max = 2; // Maximum value
 };
 
+/**
+ * Converter Protection Type
+ * This is used to define the protection type for the converter.
+ *
+ * (Voltage & Current)
+ * The protection type is used to determine the behavior of the converter
+ * when the input voltage or the current is outside of the defined range.
+ *
+ * (Power)
+ * The protection type is used to determine the behavior of the converter
+ * when the input power is outside of the defined range.
+ */
 enum ProtectionType {
-  VOLTAGE_CURRENT = 0;
-  POWER = 1;
+  VOLTAGE_CURRENT = 0; // Limiting by Voltage and Current
+  POWER = 1;           // Limiting by Power
 };
 
+/**
+ * Converter Power Safety Configuration
+ * This is used to define the power safety configuration for the converter.
+ * protection_type is used to define the behavior of the converter when the
+ * "input power" or the "Current or Voltage" is outside of the defined range.
+ *
+ * voltage_range & current_range are ONLY USED IF protection_type =
+ * VOLTAGE_CURRENT power_range is ONLY USED IF protection_type = POWER
+ */
 message PowerSafetyConfig {
-  ProtectionType protection_type = 1;
-  Range voltage_range = 2;
-  Range current_range = 3;
-  Range power_range = 4;
+  ProtectionType protection_type = 1; // Protection Type
+  Range voltage_range = 2;            // Voltage range
+  Range current_range = 3;            // Current range
+  Range power_range = 4;              // Power range
 };
 
+/**
+ * This is used to define the behavior, when the safety system is engaged.
+ */
 enum SafetyAction {
-  IGNORE = 0;
-  WARN = 1;
-  STOP = 2;
+  IGNORE = 0; // No action, ignore
+  WARN = 1;   // No action, but warn the user
+  STOP = 2;   // Shutdown the converter
 };
 
-message ConverterConfig {
+/**
+ * This is used to define converter configuration.
+ */
+message PowerConfig {
   PowerSafetyConfig safety_config = 1;
   SafetyAction safety_action = 2;
-};  
+};
 
 // Main Configuration
 
+/**
+ * This is used to configure the WARP board.
+ */
 message WARPConfig {
-  ADCMode adc_mode = 1;
-  ConverterConfig conv1_config = 2;
-  ConverterConfig conv2_config = 3;
+  ADCMode adc_mode = 1;             // used to configure operation mode of ADC.
+  PowerConfig conv1_config = 2; // used to configure converter 1
+  PowerConfig conv2_config = 3; // used to configure converter 2
+  PowerConfig ch0_config = 4;   // used to configure channel 0
+  PowerConfig ch1_config = 5;   // used to configure channel 1
+  PowerConfig ch2_config = 6;   // used to configure channel 2
+  PowerConfig ch3_config = 7;   // used to configure channel 3
+  PowerConfig ch4_config = 8;   // used to configure channel 4
+  PowerConfig ch5_config = 9;   // used to configure channel 5
+  PowerConfig ch6_config = 10;  // used to configure channel 6
+  PowerConfig ch7_config = 11;  // used to configure channel 7
 };
 
+message WARPSetEnabled {
+  PWMEnabled pwm_enable = 4; // enable/disable PWM channels
+  bool conv1_enable = 2; // enable/disable converter 1
+  bool conv2_enable = 3; // enable/disable converter 2
+
+};
+
+/**
+ * This is used to command the WARP board.
+ */
 message WARPCommand {
-  PWMData pulse = 1;
-  bool conv1_enable = 2;
-  bool conv2_enable = 3;
+  PWMData pulse = 1;     // used to command PWM channels
 };
 
+enum WARPError {
+  NO_ERROR = 0;          // No error
+  CONV1_OVERVOLTAGE = 1; // converter 1 overvoltage
+  CONV1_UNDERVOLTAGE = 2; // conveter1 undervoltage
+  CONV1_OVERCURRENT = 3; // converter 1 overcurrent
+  CONV1_UNDERCURRENT = 4; // converter 1 undercurrent
+  CONV1_OVERPOWER = 5; // converter 1 overpower
+  CONV1_UNDERPOWER = 6; // converter 1 underpower
+  CONV2_OVERVOLTAGE = 7; // converter 2 overvoltage
+  CONV2_UNDERVOLTAGE = 8; // conveter2 undervoltage
+  CONV2_OVERCURRENT = 9; // converter 2 overcurrent
+  CONV2_UNDERCURRENT = 10; // converter 2 undercurrent
+  CONV2_OVERPOWER = 11; // converter 2 overpower
+  CONV2_UNDERPOWER = 12; // converter 2 underpower
+  CH0_OVERVOLTAGE = 13; // channel 0 overvoltage
+  CH0_UNDERVOLTAGE = 14; // channel 0 undervoltage
+  CH0_OVERCURRENT = 15; // channel 0 overcurrent
+  CH0_UNDERCURRENT = 16; // channel 0 undercurrent
+  CH0_OVERPOWER = 17; // channel 0 overpower
+  CH0_UNDERPOWER = 18; // channel 0 underpower
+  CH1_OVERVOLTAGE = 19; // channel 1 overvoltage
+  CH1_UNDERVOLTAGE = 20; // channel 1 undervoltage
+  CH1_OVERCURRENT = 21; // channel 1 overcurrent
+  CH1_UNDERCURRENT = 22; // channel 1 undercurrent
+  CH1_OVERPOWER = 23; // channel 1 overpower
+  CH1_UNDERPOWER = 24; // channel 1 underpower
+  CH2_OVERVOLTAGE = 25; // channel 2 overvoltage
+  CH2_UNDERVOLTAGE = 26; // channel 2 undervoltage
+  CH2_OVERCURRENT = 27; // channel 2 overcurrent
+  CH2_UNDERCURRENT = 28; // channel 2 undercurrent
+  CH2_OVERPOWER = 29; // channel 2 overpower
+  CH2_UNDERPOWER = 30; // channel 2 underpower
+  CH3_OVERVOLTAGE = 31; // channel 3 overvoltage
+  CH3_UNDERVOLTAGE = 32; // channel 3 undervoltage
+  CH3_OVERCURRENT = 33; // channel 3 overcurrent
+  CH3_UNDERCURRENT = 34; // channel 3 undercurrent
+  CH3_OVERPOWER = 35; // channel 3 overpower
+  CH3_UNDERPOWER = 36; // channel 3 underpower
+  CH4_OVERVOLTAGE = 37; // channel 4 overvoltage
+  CH4_UNDERVOLTAGE = 38; // channel 4 undervoltage
+  CH4_OVERCURRENT = 39; // channel 4 overcurrent
+  CH4_UNDERCURRENT = 40; // channel 4 undercurrent
+  CH4_OVERPOWER = 41; // channel 4 overpower
+  CH4_UNDERPOWER = 42; // channel 4 underpower
+  CH5_OVERVOLTAGE = 43; // channel 5 overvoltage
+  CH5_UNDERVOLTAGE = 44; // channel 5 undervoltage
+  CH5_OVERCURRENT = 45; // channel 5 overcurrent
+  CH5_UNDERCURRENT = 46; // channel 5 undercurrent
+  CH5_OVERPOWER = 47; // channel 5 overpower
+  CH5_UNDERPOWER = 48; // channel 5 underpower
+  CH6_OVERVOLTAGE = 49; // channel 6 overvoltage
+  CH6_UNDERVOLTAGE = 50; // channel 6 undervoltage
+  CH6_OVERCURRENT = 51; // channel 6 overcurrent
+  CH6_UNDERCURRENT = 52; // channel 6 undercurrent
+  CH6_OVERPOWER = 53; // channel 6 overpower
+  CH6_UNDERPOWER = 54; // channel 6 underpower
+  CH7_OVERVOLTAGE = 55; // channel 7 overvoltage
+  CH7_UNDERVOLTAGE = 56; // channel 7 undervoltage
+  CH7_OVERCURRENT = 57; // channel 7 overcurrent
+  CH7_UNDERCURRENT = 58; // channel 7 undercurrent
+  CH7_OVERPOWER = 59; // channel 7 overpower
+  CH7_UNDERPOWER = 60; // channel 7 underpower
+  ADS1_ERROR = 61; // ADC1 error
+  ADS2_ERROR = 62; // ADC2 error
+  ADS3_ERROR = 63; // ADC3 error
+  ADS4_ERROR = 64; // ADC4 error
+};
+
+/**
+ * This is used to report  information from the WARP board.
+ */
+message WARPInfo {
+  uint32 firmware_version = 1; // First 2 bytes are the major version, second 2
+                               // bytes are the minor version.
+};
+
+/**
+ * This is the main request message used to communicate with the WARP board.
+ *
+ * This message is sent from HOST to WARP board.
+ * One of the fields under "request" field is used at each time.
+ */
 message WARPRequest {
+  uint32 time = 1;
   oneof request {
-    WARPConfig configuration = 1;
-    WARPCommand command = 2;
+    WARPConfig configuration = 2; // configuration field
+    WARPSetEnabled set_enabled = 3; // set enabled field
+    WARPCommand command = 4;      // command field
   };
 };
 
-message WARPInfo {
-  string firmware_version = 1;
-  ADCChannelNames adc_channel_names = 2;
-};
-
+/**
+ * This is the main response message used to communicate with the WARP board.
+ *
+ * This message is sent from WARP board to HOST.
+ * One of the fields under "response" field is used at each time.
+ */
 message WARPResponse {
+  uint32 time = 1;
   oneof response {
-    WARPInfo info = 1;
-    ADCData adc_data = 2;
+    WARPInfo info = 2;    // information of the WARP board
+    ADCData adc_data = 3; // adc data
+    WARPError error = 4;
   };
 };
